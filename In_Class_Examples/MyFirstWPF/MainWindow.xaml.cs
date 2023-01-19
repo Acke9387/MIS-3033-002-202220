@@ -24,5 +24,21 @@ namespace MyFirstWPF
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {           
+            string name = txtName.Text;
+
+            if (string.IsNullOrWhiteSpace(name) == false)
+            {
+                MessageBox.Show($"Hello {name}!"); 
+            }
+            else
+            {
+                MessageBox.Show("Please enter your name and then press the button");
+            }
+        }
+
+
     }
 }

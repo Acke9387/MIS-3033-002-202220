@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyFirstWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="My First WPF" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="https://th.bing.com/th/id/R.3e2b81a3a8c1a875ccd3598b6eaa9f80?rik=FyfjhfrHj2NCZw&amp;pid=ImgRaw&amp;r=0"/>
+    </Window.Background>
     <Grid>
+        <Button Content="Click Here" HorizontalAlignment="Left" Margin="266,271,0,0" VerticalAlignment="Top" Height="84" Width="199" IsDefault="True" Click="Button_Click"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="241,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Enter your name:" HorizontalAlignment="Left" Margin="33,74,0,0" VerticalAlignment="Top" Width="135" Background="#FFEF4545"/>
 
     </Grid>
 </Window>
