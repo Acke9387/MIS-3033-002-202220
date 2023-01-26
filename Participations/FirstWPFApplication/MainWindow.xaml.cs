@@ -23,6 +23,35 @@ namespace FirstWPFApplication
         public MainWindow()
         {
             InitializeComponent();
+
+            txtBirthdate.Text = "";
+            txtName.Text = string.Empty;
+            txtName.Clear();
+
+            wndMain.Background = Brushes.Firebrick;
+        }
+
+        private void btnCalculate_Click(object sender, RoutedEventArgs e)
+        {
+            string name = txtName.Text;
+            string bdate = txtBirthdate.Text;
+
+            DateTime birthdate = Convert.ToDateTime(bdate);
+
+            var age = DateTime.Now - birthdate;
+
+            lstOutput.Items.Add((age.TotalDays / 365).ToString("N0"));
+            //MessageBox.Show($"You are {(age.TotalDays / 365).ToString("N0")} years old");
+        }
+
+        private void btnCalculate_MouseEnter(object sender, MouseEventArgs e)
+        {
+            wndMain.Background = Brushes.Magenta;
+        }
+
+        private void btnCalculate_MouseLeave(object sender, MouseEventArgs e)
+        {
+            wndMain.Background = Brushes.Firebrick;
         }
     }
 }

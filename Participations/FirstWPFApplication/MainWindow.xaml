@@ -1,12 +1,18 @@
-﻿<Window x:Class="FirstWPFApplication.MainWindow"
+﻿<Window x:Name="wndMain" x:Class="FirstWPFApplication.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FirstWPFApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="#FFE47777">
     <Grid>
+        <TextBox x:Name="txtBirthdate" HorizontalAlignment="Left" Margin="216,105,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Please enter your birthdate" HorizontalAlignment="Left" Margin="50,101,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="215,61,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Please enter your name" HorizontalAlignment="Left" Margin="53,57,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnCalculate" Content="Calculate Age" HorizontalAlignment="Left" Margin="179,200,0,0" VerticalAlignment="Top" Height="48" Width="93" Click="btnCalculate_Click" MouseEnter="btnCalculate_MouseEnter" MouseLeave="btnCalculate_MouseLeave"/>
+        <ListBox x:Name="lstOutput" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="400,0,0,0"/>
 
     </Grid>
 </Window>
