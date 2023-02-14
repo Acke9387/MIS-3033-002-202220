@@ -1,0 +1,15 @@
+﻿<Window x:Class="JSON_Serialization.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JSON_Serialization"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="cboPlatform" HorizontalAlignment="Left" Margin="65,74,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cboPlatform_SelectionChanged"/>
+        <ListBox x:Name="lstData" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,182,0,0"/>
+        <Button x:Name="btnExport" Content="Save Data" HorizontalAlignment="Left" Margin="470,96,0,0" VerticalAlignment="Top" Click="btnExport_Click"/>
+
+    </Grid>
+</Window>
