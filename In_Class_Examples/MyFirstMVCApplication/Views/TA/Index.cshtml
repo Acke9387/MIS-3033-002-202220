@@ -1,0 +1,23 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "All TAs";
+}
+
+<h1>Here are Professor Ackermans TAs</h1>
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="card picture" style="width: 18rem; margin:5px;">
+                <img src="https://scionstaffing.com/wp-content/uploads/2020/11/Untitled-design.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@item</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
