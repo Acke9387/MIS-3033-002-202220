@@ -16,5 +16,35 @@ namespace MyFirstMVCApplication.Controllers
 
             return View(tas);
         }
+
+        public IActionResult Details(string name = "")
+        {
+            List<string> tas = new List<string>();
+            tas.Add("Talia");
+            tas.Add("Tim");
+            tas.Add("Micah");
+            tas.Add("Luke");
+            tas.Add("Matt");
+            tas.Add("Connor");
+
+            string ta = tas.Where(x => x == name).SingleOrDefault();
+
+            return View((object)ta);
+        }
+
+        public IActionResult Deets(string id)
+        {
+            List<string> tas = new List<string>();
+            tas.Add("Talia");
+            tas.Add("Tim");
+            tas.Add("Micah");
+            tas.Add("Luke");
+            tas.Add("Matt");
+            tas.Add("Connor");
+
+            string ta = tas.Where(x => x == id).SingleOrDefault();
+
+            return View((object)ta);
+        }
     }
 }
