@@ -1,0 +1,14 @@
+﻿@model MVC_Beginner.Models.PokemonInfo
+
+@{
+    ViewData["Title"] = "Info";
+}
+
+<h1>Info</h1>
+
+<div>
+    <h4>@Model.name</h4>
+    <hr />
+    <img src="@Model.sprites.front_default" />
+</div>
+

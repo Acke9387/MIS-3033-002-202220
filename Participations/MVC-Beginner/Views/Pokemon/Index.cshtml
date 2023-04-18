@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MVC_Beginner.Models.Pokemon>
+
+@{
+    ViewData["Title"] = "Pokedex";
+}
+
+<h1>Pokedex</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href="/Pokemon/Info/@item.name" >@Html.DisplayFor(modelItem => item.name)</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
