@@ -1,4 +1,7 @@
+using MVC_EF.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<DB_128040_practiceContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
